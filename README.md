@@ -12,15 +12,22 @@ Currently, two official plugins are available:
 
 1-docker pull mysql
 2-docker image ls
-3-docker run -d -p 3308:3306 --name=mysql-docker --env="MYSQL_ROOT_PASSWORD=root" --env="MYSQl_PASSWORD=M.root1847" --env="MYSQL_DATABASE=managementsystem" mysql
+3-docker run -d -p 3308:3306 --name=docker-container --env="MYSQL_ROOT_PASSWORD=root" --env="MYSQl_PASSWORD=root" --env="MYSQL_DATABASE=managementsystem" mysql
 
 4-docker container ls
-5- docker exec -it mysql-docker bash
+5-  docker exec -it docker-container bash
 6-mysql -uroot -proot
 7-show databases;
 
 8- mvn clean install -DskipTests (To build Spring boot jar file in the target folder)
 
-9-  docker build -t pmgsystem-image .
+9-  docker build -t pmgsystem .
+10 - docker run --env-file .env pmsystem
+======= to run the docker container=======
+11- docker start docker-container
+12- docker run -t --link docker-container:mysql -p 8080:8080 pmgsystem
+13- docker-compose up --build
+
+
 
 
