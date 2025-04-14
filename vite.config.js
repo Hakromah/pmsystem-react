@@ -6,6 +6,14 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
 	plugins: [react(), tailwindcss({
+		//for docker
+		server: {
+			host: true,
+			port: 5173,
+			watch: {
+				usePolling: true,
+			},
+		},
 		darkMode: "class", // Enables class-based dark mode
 		theme: {
 			extend: {
