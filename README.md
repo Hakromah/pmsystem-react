@@ -33,7 +33,3 @@ Currently, two official plugins are available:
 To dockerize React.js
 1- docker build -t pmsystem-ui-docker .
 2- docker run -p 5173:5173 pmsystem-ui-docker
-
-
-
-
