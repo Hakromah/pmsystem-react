@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogHeader, DialogTrigger } from "@/components/ui/dialog"
 import CreateProjectForm from "../project/CreateProjectForm"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { PersonIcon } from "@radix-ui/react-icons"
+import { AngleIcon, PersonIcon } from "@radix-ui/react-icons"
 import { useNavigate } from "react-router-dom"
 import ThemeToggle from "./ThemeToggle"
 import { useDispatch, useSelector } from "react-redux"
@@ -22,8 +22,10 @@ const Navbar = () => {
   return (
     <div className="border-b py-4 px-5 flex items-center justify-between">
 
-      <div className="flex items-center gap-3">
-        <p onClick={() => navigate("/")} className="cursor-pointer">Project Management</p>
+      <div className="flex items-center gap-1.5 sm:gap-3">
+        <p onClick={() => navigate("/")} className="cursor-pointer text-cyan-300 sm:block hidden">Project Management</p>
+        <AngleIcon onClick={() => navigate("/")}
+          className="sm:hidden size-6 cursor-pointer fonts-bold text-cyan-300" />
 
         <Dialog>
 
