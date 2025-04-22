@@ -63,8 +63,8 @@ const ProjectList = () => {
 
   return (
     <>
-      <div className="relative px-5 lg:px-0 lg:flex gap-5 justify-center py-5">
-        <section className="filterSection md:order-1 order-2">
+      <div className="relative px-5 lg:px-0 flex lg:flex-row flex-col lg:gap-5 gap-10 justify-center py-5">
+        <section className="filterSection order-2 md:order-1">
           <Card className="p-5 sticky top-10">
             <div className="flex justify-between lg:w-[20rem]">
               <p className="text-xl -tracking-wider">filters</p>
@@ -140,7 +140,7 @@ const ProjectList = () => {
           </Card>
         </section>
         {/* project section */}
-        <section className="projectListSection w-full lg:w-[48rem]">
+        <section className="projectListSection w-full lg:w-[48rem] order-1">
           <div className="flex gap-2 items-center pb-5 justify-between">
             <div className="relative p-0 w-full">
               <Input
@@ -152,7 +152,7 @@ const ProjectList = () => {
             </div>
           </div>
 
-          <div className="space-y-5 min-h-[74vh]">
+          <div className="space-y-5 lg:min-h-[74vh]">
             {keyword
               ? project.searchProjects?.map((item, index) =>
                 <ProjectCard item={item} key={item.id * index} />) : project.projects?.map((item) => (
