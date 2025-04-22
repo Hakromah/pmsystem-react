@@ -16,6 +16,7 @@ const Auth = () => {
                      <div className="flex text-white gap-2 w-full items-center">
                         <div>Already have account?</div>
                         <Button
+                           className="text-blue-500 font-semibold pl-2"
                            variant="ghost"
                            size="icon"
                            onClick={(() => setActive(!active))}>

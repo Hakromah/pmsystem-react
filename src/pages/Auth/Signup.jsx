@@ -68,7 +68,8 @@ const Signup = () => {
                         <FormMessage />
                      </FormItem>)}
                />
-               <Button type="submit" className="w-full mt-5">
+               <Button type="submit"
+                  className="w-full text-blue-500 bg-gray-600 cursor-pointer font-semibold mb-1">
                   Register
                </Button>
             </form>

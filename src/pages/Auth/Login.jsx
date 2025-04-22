@@ -20,7 +20,7 @@ const Login = () => {
    }
    return (
       <div className="space-y-5">
-         <h1 className="text-white">Login</h1>
+         <h1 className="text-white font-semibold">Login</h1>
          <Form {...form}>
             <form className="space-y-5" onSubmit={form.handleSubmit(onSubmit)}>
                {/* Sign In form */}
@@ -51,7 +51,8 @@ const Login = () => {
                         <FormMessage />
                      </FormItem>)}
                />
-               <Button variant="ghost" size="icon" type="submit" className="w-full mt-5 text-white">
+               <Button variant="ghost" size="icon" type="submit"
+                  className="w-full mt-5 text-blue-500 font-semibold cursor-pointer bg-blue-50">
                   Signin
                </Button>
             </form>

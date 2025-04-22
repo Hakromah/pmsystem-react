@@ -29,7 +29,7 @@ const Navbar = () => {
 
           <DialogTrigger>
 
-            <Button variant="ghost">New Project</Button>
+            <Button className="text-blue-500 cursor-pointer" variant="ghost">New Project</Button>
           </DialogTrigger>
 
           <DialogContent>
@@ -54,10 +54,12 @@ const Navbar = () => {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuItem className="flex items-center justify-center" onClick={handleLogout}>Logout</DropdownMenuItem>
+            <DropdownMenuItem className="flex items-center justify-center text-sm cursor-pointer"
+              onClick={handleLogout}>Logout</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
-        <p>{auth.user?.fullName}</p>
+        <p className="text-sm text-blue-500 sm:block hidden">
+          {auth.user?.fullName}</p>
       </div>
     </div>
   )
