@@ -19,9 +19,9 @@ const ThemeToggle = () => {
       <>
          <Button variant="outline" size="icon"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2 border w-28 cursor-pointer flex items-center"
+            className="cursor-pointer flex items-center"
          >
-            {theme === "dark" ? "🌙 Dark Mode" : "☀️ Light Mode"}
+            {theme === "dark" ? "🌙" : "☀️"}
          </Button>
       </>
    )
